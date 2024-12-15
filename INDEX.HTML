@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Current Employment Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 400px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Current Employment Details</h1>
+<form action="/submit" method="post">
+  <fieldset>
+    <legend>Employment Status</legend>
+    <label for="currentlyWorking">Are you currently working?</label>
+    <select id="currentlyWorking" name="currentlyWorking" required>
+      <option value="">-- Select an option --</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" name="startDate" required />
+  </fieldset>
+
+  <fieldset>
+    <legend>Role Details</legend>
+    <label for="jobTitle">Role or Job Title</label>
+    <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., 841299 - Crop Farm Workers nec" required />
+
+    <label for="nameOfRole">Name of Role</label>
+    <input type="text" id="nameOfRole" name="nameOfRole" placeholder="e.g., Orchard Worker" required />
+
+    <label for="countryOfWork">Country/Territory of Work</label>
+    <input type="text" id="countryOfWork" name="countryOfWork" placeholder="e.g., New Zealand" required />
+
+    <label for="stateOrRegion">State/Province/Region</label>
+    <input type="text" id="stateOrRegion" name="stateOrRegion" placeholder="e.g., Cambridge" required />
+
+    <label for="countryOfOrg">Country/Territory Where Organisation is Based</label>
+    <input type="text" id="countryOfOrg" name="countryOfOrg" placeholder="e.g., New Zealand" required />
+  </fieldset>
+
+  <fieldset>
+    <legend>Employer Details</legend>
+    <label for="orgName">Name of Organisation or Employer</label>
+    <input type="text" id="orgName" name="orgName" placeholder="e.g., Dovegreen Management Limited" required />
+
+    <label for="orgAddress">Head Office Address</label>
+    <textarea id="orgAddress" name="orgAddress" placeholder="e.g., 46 Seachange Drive, Leamington, Cambridge, Waikato, 3432, NZL" required></textarea>
+
+    <label for="orgPhone">Employer Phone Number</label>
+    <input type="tel" id="orgPhone" name="orgPhone" placeholder="e.g., +642111156611" required />
+
+    <label for="orgEmail">Employer Email Address</label>
+    <input type="email" id="orgEmail" name="orgEmail" placeholder="e.g., mailgrandhawa@gmail.com" required />
+  </fieldset>
+
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+</body>
+</html>
